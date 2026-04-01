@@ -1,4 +1,5 @@
 import {ReusableHeading} from '../shared/ReusableHeading';
+import { motion } from 'motion/react';
 
 type Step = {
   id: number;
@@ -64,7 +65,11 @@ function StepCircle({ step }: { step: Step }) {
   return (
     <article className="relative rounded-2xl  px-4 pb-6 pt-6 text-center">
       <div className="mx-auto mb-4 flex h-32.5 w-32.5 items-center justify-center rounded-full border-[7px] border-[#2c0b7f] bg-[#f6d31c]">
-        <div className="absolute h-37.5 w-37.5 rounded-full border-[3px] border-dashed border-[#a3a3a3]" />
+        <motion.div
+          className="absolute h-37.5 w-37.5 rounded-full border-[3px] border-dashed border-[#a3a3a3] will-change-transform"
+          animate={{ rotate: [0, 360] }}
+          transition={{ repeat: Infinity, repeatType: 'loop', duration: 8, ease: 'linear' }}
+        />
         <span className="relative text-5xl font-black text-black">{step.id}</span>
       </div>
 
