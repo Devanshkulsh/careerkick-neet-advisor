@@ -1,11 +1,14 @@
 import "./App.css";
-import Hero from "./components/Hero";
+import AchievementSection from "./components/AchievementSection";
+import Stepper from "./components/Stepper";
 
 function App() {
   return (
     <>
       <main className="min-h-screen bg-background text-foreground">
-        <Hero />
+        {/* <Hero /> */}
+        <Stepper/>
+        <AchievementSection/>
       </main>
     </>
   );
