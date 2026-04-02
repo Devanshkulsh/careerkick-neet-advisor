@@ -1,5 +1,4 @@
 import TypingHeading from "../shared/TypingHeading";
-import HeroInsightCard from "./hero/HeroInsightCard";
 
 export default function Hero() {
   return (
@@ -19,27 +18,44 @@ export default function Hero() {
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-7 text-white lg:pr-6">
             <p className="section-kicker text-white/80">CAREERKICK NEET ADVISOR</p>
-            <TypingHeading
-              staticText="Your personal NEET roadmap,"
-              words={[
-                "built for top ranks.",
-                "designed for consistency.",
-                "powered by data.",
-              ]}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-white"
-              staticTextClass="text-white/80"
-              dynamicTextClass="text-white"
-              cursorClass="text-white"
-              typingSpeed={60}
-              deletingSpeed={30}
-              delayBetweenWords={1000}
-            />
+            
+            {/* --- UPDATED WRAPPER --- */}
+            <div className="relative w-full">
+              {/* 1. Invisible Placeholder: Uses the longest string to set the permanent height */}
+              <div 
+                className="invisible pointer-events-none text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight" 
+                aria-hidden="true"
+              >
+                Your personal NEET roadmap, designed for consistency.
+              </div>
+              
+              {/* 2. Absolute overlay for the actual typing effect */}
+              <div className="absolute top-0 left-0 w-full h-full">
+                <TypingHeading
+                  staticText="Your personal NEET roadmap,"
+                  words={[
+                    "built for top ranks.",
+                    "designed for consistency.",
+                    "powered by data.",
+                  ]}
+                  className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-white"
+                  staticTextClass="text-white/80"
+                  dynamicTextClass="text-white"
+                  cursorClass="text-white"
+                  typingSpeed={60}
+                  deletingSpeed={30}
+                  delayBetweenWords={1000}
+                />
+              </div>
+            </div>
+            {/* ----------------------- */}
+
             <p className="max-w-xl text-base text-white/80 sm:text-lg lg:text-xl leading-relaxed">
               Personalized study plans, smart analytics, and expert guidance to
               keep your prep focused, consistent, and confident.
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <button className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition hover:translate-y-[-1px] hover:shadow-xl">
+              <button className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition hover:-translate-y-px hover:shadow-xl">
                 Start your plan
               </button>
               <button className="rounded-full border border-white/40 bg-transparent px-6 py-3 text-sm font-semibold text-white/80 transition hover:border-white hover:text-white">
@@ -58,6 +74,12 @@ export default function Hero() {
               </span>
             </div>
           </div>
+          
+          {/* Assuming you want your Insight Card rendered here based on the grid setup */}
+          <div className="hidden lg:block lg:pl-6">
+             {/* <HeroInsightCard /> */}
+          </div>
+
         </div>
       </div>
     </section>
