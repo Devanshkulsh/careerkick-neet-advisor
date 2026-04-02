@@ -42,15 +42,15 @@ const data: Row[] = [
 
 export default function NeetGuideTable() {
   return (
-    <section className="w-full bg-gray-100 py-10 px-4">
+    <section className="w-full bg-white py-10 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-6">
           {/* <p className="text-gray-500 text-sm">
             An innovative guide exclusively
           </p> */}
-          <p className="text-gray-500 text-sm">Paid Counselling</p>
-          <h2 className="text-3xl font-bold text-indigo-900">
+          <p className="text-black/65 text-sm">Paid Counselling</p>
+          <h2 className="text-3xl font-bold text-[#56b016]">
             designed for Medical & Allied Courses
           </h2>
         </div>
@@ -59,14 +59,14 @@ export default function NeetGuideTable() {
           <div className="min-w-180">
             {/* Top Header */}
             <div className="grid grid-cols-3 gap-2 mb-2">
-              <div className="bg-[#b9a9a3] rounded-tl-3xl py-6 text-center font-bold text-lg">
+              <div className="rounded-tl-3xl bg-[#56b016] py-6 text-center font-bold text-lg text-white">
                 Course / Service
               </div>
 
-              <div className="bg-[#b9a9a3] py-4 text-center">
+              <div className="bg-[#56b016] py-4 text-center text-white">
                 <p className="font-bold text-lg">Description</p>
               </div>
-              <div className="bg-[#b9a9a3] rounded-tr-3xl py-4 text-center">
+              <div className="rounded-tr-3xl bg-[#56b016] py-4 text-center text-white">
                 <p className="font-bold text-lg">Price (Incl. GST)</p>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function NeetGuideTable() {
                   className="grid grid-cols-3 gap-2 rounded-xl overflow-hidden shadow-sm"
                 >
                   {/* Left Section */}
-                  <div className="bg-yellow-400 flex items-center gap-4 p-4">
+                  <div className="flex items-center gap-4 bg-[#56b016] p-4 text-white">
                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow">
                       {item.icon}
                     </div>
@@ -90,14 +90,14 @@ export default function NeetGuideTable() {
                   </div>
 
                   {/* Middle */}
-                  <div className="bg-indigo-900 text-white flex flex-col justify-center gap-2 p-4">
+                  <div className="flex flex-col justify-center gap-2 bg-black p-4 text-white">
                     <p className="text-sm leading-relaxed text-white/90">
                       {item.description}
                     </p>
                   </div>
 
                   {/* Right */}
-                  <div className="bg-yellow-400 flex items-center justify-center text-center font-medium p-4">
+                  <div className="flex items-center justify-center bg-[#56b016] p-4 text-center font-medium text-white">
                     <span className="text-sm">{item.price}</span>
                   </div>
                 </div>

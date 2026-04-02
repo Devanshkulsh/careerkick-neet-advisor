@@ -35,50 +35,50 @@
   :root {
   /* Base (LIGHT THEME) */
   --background: 0 0% 100%;
-  --foreground: 222 22% 15%; /* charcoal text */
+  --foreground: 0 0% 0%;
 
   /* Cards / Surfaces */
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  --card-foreground: 0 0% 0%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
+  --popover-foreground: 0 0% 0%;
 
   /* Primary (CareerKick green) */
-  --primary: 95 70% 40%;
+  --primary: 91 77% 39%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary (soft green surfaces) */
-  --secondary: 95 30% 96%;
-  --secondary-foreground: 222 22% 15%;
+  /* Secondary */
+  --secondary: 0 0% 100%;
+  --secondary-foreground: 0 0% 0%;
 
   /* Muted */
-  --muted: 95 20% 95%;
-  --muted-foreground: 220 9% 40%;
+  --muted: 90 50% 97%;
+  --muted-foreground: 0 0% 25%;
 
-  /* Accent (lighter brand green) */
-  --accent: 105 55% 45%;
-  --accent-foreground: 0 0% 100%;
+  /* Accent (highlight yellow) */
+  --accent: 48 97% 55%;
+  --accent-foreground: 0 0% 0%;
 
   /* Danger */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
   /* Borders / Inputs */
-  --border: 95 15% 90%;
-  --input: 95 15% 90%;
-  --ring: 95 70% 40%;
+  --border: 91 35% 82%;
+  --input: 91 35% 82%;
+  --ring: 91 77% 39%;
 
   /* Radius */
   --radius: 0.75rem;
 
   /* Effects (adjusted for light bg) */
-  --neon-glow: 0 0 20px hsl(95 70% 40% / 0.2), 0 0 40px hsl(95 70% 40% / 0.12);
-  --neon-glow-strong: 0 0 30px hsl(95 70% 40% / 0.3), 0 0 60px hsl(95 70% 40% / 0.18);
+  --neon-glow: 0 0 20px hsl(91 77% 39% / 0.2), 0 0 40px hsl(91 77% 39% / 0.12);
+  --neon-glow-strong: 0 0 30px hsl(91 77% 39% / 0.3), 0 0 60px hsl(91 77% 39% / 0.18);
 
   /* Glass (LIGHT VERSION) */
   --glass-bg: hsl(0 0% 100% / 0.78);
-  --glass-border: hsl(220 10% 10% / 0.08);
+  --glass-border: hsl(91 77% 39% / 0.2);
   --glass-bg-hover: hsl(0 0% 100% / 0.92);
 }
 
@@ -160,7 +160,7 @@
   }
 
   .text-glow {
-    text-shadow: 0 0 18px hsl(95 70% 40% / 0.35);
+    text-shadow: 0 0 18px hsl(91 77% 39% / 0.35);
   }
 
   .noise-overlay::after {
@@ -175,9 +175,9 @@
 
   .gradient-mesh {
     background: 
-      radial-gradient(ellipse 60% 50% at 12% 35%, hsl(95 70% 40% / 0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 45% 60% at 85% 20%, hsl(105 55% 45% / 0.06) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 50% 85%, hsl(88 60% 52% / 0.05) 0%, transparent 60%);
+      radial-gradient(ellipse 60% 50% at 12% 35%, hsl(91 77% 39% / 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 45% 60% at 85% 20%, hsl(48 97% 55% / 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 50% 85%, hsl(91 77% 39% / 0.05) 0%, transparent 60%);
   }
 
   .marquee {
@@ -190,7 +190,7 @@
   }
 
   .counter-glow {
-    text-shadow: 0 0 40px hsl(71 89% 52% / 0.6), 0 0 80px hsl(71 89% 52% / 0.3);
+    text-shadow: 0 0 40px hsl(48 97% 55% / 0.6), 0 0 80px hsl(48 97% 55% / 0.3);
   }
 }
 

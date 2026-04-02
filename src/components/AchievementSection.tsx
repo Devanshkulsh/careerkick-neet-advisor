@@ -38,7 +38,7 @@ const AchievementSection = () => {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="absolute inset-0 flex flex-col">
-        <div className="h-1/2 w-full bg-[#FDE047]" />
+        <div className="h-1/2 w-full bg-[#56b016]" />
         <div className="h-1/2 w-full bg-white" />
       </div>
 
@@ -76,14 +76,14 @@ const AchievementSection = () => {
                 />
 
                 <div className="relative flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-4 border-black bg-white shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]">
-                  <div className="flex h-[85%] w-[85%] items-center justify-center rounded-full border-2 border-black bg-[#FDE047] text-black transition-colors duration-500 group-hover:bg-[#2D1B69] group-hover:text-white">
+                  <div className="flex h-[85%] w-[85%] items-center justify-center rounded-full border-2 border-black bg-[#56b016] text-white transition-colors duration-500 group-hover:bg-black group-hover:text-white">
                     {item.icon}
                   </div>
                 </div>
               </div>
 
               <h3 className="mb-1 text-3xl font-black text-black">{item.value}</h3>
-              <p className="text-sm font-medium text-zinc-800 md:text-base">{item.label}</p>
+              <p className="text-sm font-medium text-black/80 md:text-base">{item.label}</p>
             </motion.div>
           ))}
         </div>

@@ -27,7 +27,7 @@ export const ReusableHeading = ({
                L295,55 
                C260,50 200,60 150,55 
                C100,50 50,60 5,55 Z"
-            fill="#FACC15" // Tailwind yellow-400
+            fill="#56b016"
           />
         </svg>
 
@@ -38,7 +38,7 @@ export const ReusableHeading = ({
       </div>
 
       {subtitle && (
-        <p className={`mt-2 text-gray-700 text-md md:text-lg ${subtitleClass}`}>
+        <p className={`mt-2 text-black/70 text-md md:text-lg ${subtitleClass}`}>
           {subtitle}
         </p>
       )}
