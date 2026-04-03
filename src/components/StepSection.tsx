@@ -97,16 +97,16 @@ const StepSection = () => {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   return (
-    <section ref={targetRef} className="relative h-[600vh] bg-zinc-950 font-sans">
+    <section ref={targetRef} className="relative h-[600vh] bg-white font-sans">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <div className="flex flex-col w-full">
           {/* Section Header */}
           <div className="px-6 md:px-12 mb-12">
-            <p className="text-[10px] font-mono text-red-500 tracking-widest uppercase mb-3">
+            <p className="text-[10px] font-mono text-[#56b016] tracking-widest uppercase mb-3">
               How It Works
             </p>
-            <h2 className="text-5xl md:text-8xl font-black text-white/10 uppercase tracking-tighter italic mb-10">
-              Process<span className="text-red-600 opacity-100">.</span>
+            <h2 className="text-5xl md:text-8xl font-black text-black/10 uppercase tracking-tighter italic mb-10">
+              Process<span className="text-[#56b016] opacity-100">.</span>
             </h2>
           </div>
 
@@ -122,15 +122,15 @@ const StepSection = () => {
                   alt="car"
                   className="w-full h-auto object-contain drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]"
                 />
-                <div className="absolute top-1/2 -right-2 w-8 h-4 bg-red-500/30 blur-xl rounded-full animate-pulse" />
+                <div className="absolute top-1/2 -right-2 w-8 h-4 bg-[#56b016]/30 blur-xl rounded-full animate-pulse" />
               </div>
             </motion.div>
 
             {/* Progress Track */}
-            <div className="absolute top-0 left-0 w-full h-px bg-zinc-800" />
+            <div className="absolute top-0 left-0 w-full h-px bg-[#56b016]/20" />
             <motion.div
               style={{ scaleX, transformOrigin: "left" }}
-              className="absolute top-0 left-0 w-full h-0.5 bg-red-600 shadow-[0_0_20px_#ef4444]"
+              className="absolute top-0 left-0 w-full h-0.5 bg-[#56b016] shadow-[0_0_20px_rgba(86,176,22,0.65)]"
             />
 
             {/* Horizontal Scroll Content */}
@@ -148,7 +148,7 @@ const StepSection = () => {
                 <span className="text-zinc-800 font-black text-4xl md:text-7xl italic whitespace-nowrap select-none">
                   ALL
                   <br />
-                  <span className="text-red-900/60">DONE.</span>
+                  <span className="text-[#56b016]/60">DONE.</span>
                 </span>
               </div>
             </motion.div>
@@ -170,16 +170,16 @@ const ProcessCard = ({ step, index }: ProcessCardProps) => {
   return (
     <div className={`relative shrink-0 w-60 md:w-80 ${isEven ? "mt-0" : "mt-10"}`}>
       {/* Timeline dot */}
-      <div className="absolute -top-21 left-0 w-3 h-3 bg-red-600 rounded-full shadow-[0_0_10px_#ef4444]" />
+      <div className="absolute -top-21 left-0 w-3 h-3 bg-[#56b016] rounded-full shadow-[0_0_10px_rgba(86,176,22,0.65)]" />
 
       {/* Step label */}
-      <span className="block text-[10px] font-mono text-red-500 mb-3 tracking-widest uppercase">
+      <span className="block text-[10px] font-mono text-[#56b016] mb-3 tracking-widest uppercase">
         Step {step.step}
       </span>
 
-      <div className="p-5 md:p-7 bg-zinc-900/30 border border-zinc-800/50 rounded-2xl backdrop-blur-md hover:border-red-500/40 hover:bg-zinc-900/50 transition-all duration-500 group">
+      <div className="p-5 md:p-7 bg-[#56b016] border border-[#56b016]/80 rounded-2xl backdrop-blur-md hover:bg-[#4b9914] hover:border-[#4b9914] transition-all duration-500 group shadow-lg shadow-[#56b016]/20">
         {/* Icon */}
-        <div className="w-12 h-12 rounded-xl bg-zinc-800/60 border border-zinc-700/40 flex items-center justify-center text-2xl mb-5 group-hover:border-red-500/30 group-hover:bg-zinc-800 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-white/20 border border-white/25 flex items-center justify-center text-2xl mb-5 group-hover:bg-white/25 transition-all duration-300">
           {step.icon}
         </div>
 
@@ -188,17 +188,17 @@ const ProcessCard = ({ step, index }: ProcessCardProps) => {
           <h3 className="text-base md:text-xl font-bold text-white italic leading-tight pr-2">
             {step.title}
           </h3>
-          <span className="text-zinc-800 font-black text-3xl md:text-4xl italic leading-none select-none shrink-0 group-hover:text-red-900/50 transition-colors duration-500">
+          <span className="text-white/40 font-black text-3xl md:text-4xl italic leading-none select-none shrink-0 group-hover:text-white/55 transition-colors duration-500">
             {step.step}
           </span>
         </div>
 
-        <p className="text-zinc-500 text-xs md:text-sm leading-relaxed">
+        <p className="text-white/90 text-xs md:text-sm leading-relaxed">
           {step.desc}
         </p>
 
         {/* Hover accent line */}
-        <div className="mt-5 h-px w-0 bg-red-600/60 group-hover:w-full transition-all duration-700 ease-out" />
+        <div className="mt-5 h-px w-0 bg-white/75 group-hover:w-full transition-all duration-700 ease-out" />
       </div>
     </div>
   );
