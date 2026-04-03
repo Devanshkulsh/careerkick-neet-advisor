@@ -4,6 +4,7 @@ import ContactSection from "./components/ContactSection";
 import Hero from "./components/Hero";
 import NeetGuideTable from "./components/NeetGuideTable";
 import Stepper from "./components/Stepper";
+import StepSection from "./components/StepSection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main className="min-h-screen bg-background text-foreground">
         <Hero />
         <Stepper/>
+        <StepSection/>
         <AchievementSection/>
         <NeetGuideTable />
         <ContactSection />
