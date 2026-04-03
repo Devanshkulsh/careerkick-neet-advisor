@@ -11,7 +11,6 @@ function App() {
     <>
       <main className="min-h-screen bg-background text-foreground">
         <Hero />
-        <Stepper/>
         <StepSection/>
         <AchievementSection/>
         <NeetGuideTable />

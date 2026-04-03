@@ -101,13 +101,14 @@ const StepSection = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <div className="flex flex-col w-full">
           {/* Section Header */}
-          <div className="px-6 md:px-12 mb-12">
-            <p className="text-[10px] font-mono text-[#56b016] tracking-widest uppercase mb-3">
+          <div className="mb-12 px-6 md:px-12">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#56b016]">
               How It Works
             </p>
-            <h2 className="text-5xl md:text-8xl font-black text-black/10 uppercase tracking-tighter italic mb-10">
-              Process<span className="text-[#56b016] opacity-100">.</span>
+            <h2 className="text-4xl font-extrabold tracking-tight text-black md:text-6xl">
+              Process<span className="text-[#56b016]">.</span>
             </h2>
+            <div className="mt-4 h-1 w-24 rounded-full bg-[#56b016]/70 md:w-32" />
           </div>
 
           <div className="relative">
