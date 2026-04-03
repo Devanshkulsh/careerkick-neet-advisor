@@ -15,63 +15,63 @@ const PROCESS_STEPS: ProcessStep[] = [
     step: "01",
     title: "Inquiry & Registration",
     desc: "Start your journey by reaching out and completing the registration form to get onboarded into our counselling system.",
-    icon: "📋",
+    icon: "/icons/notes_15747214.gif",
   },
   {
     id: 2,
     step: "02",
     title: "Profile Data Collection",
     desc: "We gather all academic records, entrance scores, preferences, and personal details to build a comprehensive student profile.",
-    icon: "🗂️",
+    icon: "/icons/file_12756598.gif",
   },
   {
     id: 3,
     step: "03",
     title: "Profile Review & Scoring",
     desc: "Our experts analyse and score your profile based on eligibility, marks, and target criteria to prioritise the best options.",
-    icon: "🔍",
+    icon: "/icons/search_14674334.gif",
   },
   {
     id: 4,
     step: "04",
     title: "Paid Counselling Payment",
     desc: "Unlock personalised 1-on-1 expert counselling sessions by completing the secure counselling fee payment.",
-    icon: "💳",
+    icon: "/icons/credit-card_14099167.gif",
   },
   {
     id: 5,
     step: "05",
     title: "Profile Shortlisting",
     desc: "Based on your scored profile, we shortlist the most suitable programmes and institutions that align with your goals.",
-    icon: "✅",
+    icon: "/icons/check_19009714.gif",
   },
   {
     id: 6,
     step: "06",
     title: "College / Portal Shortlisting",
     desc: "We identify and shortlist the relevant admission portals and colleges to ensure no opportunity is missed.",
-    icon: "🏛️",
+    icon: "/icons/school_16675759.gif",
   },
   {
     id: 7,
     step: "07",
     title: "Form Filling",
     desc: "Our team assists in accurately filling out application forms across all shortlisted institutions and portals.",
-    icon: "✍️",
+    icon: "/icons/writing_12756630.gif",
   },
   {
     id: 8,
     step: "08",
     title: "Choice Filling",
     desc: "Strategic choice filling with priority ordering is done to maximise your chances of securing the best seat.",
-    icon: "🎯",
+    icon: "icons/goal_19011035.gif",
   },
   {
     id: 9,
     step: "09",
     title: "College Admission",
     desc: "We guide you through the final admission steps — document verification, fee payment, and confirmation of your seat.",
-    icon: "🎓",
+    icon: "/icons/education_19018124.gif",
   },
 ];
 
@@ -116,10 +116,10 @@ const StepSection = () => {
               style={{ x: carX }}
               className="absolute -top-16 z-30 pointer-events-none"
             >
-              <div className="relative w-32 h-20 md:w-48">
+              <div className="relative w-28 h-12 md:w-36">
                 <img
-                  src="https://res.cloudinary.com/dmhpenz2y/image/upload/v1767008059/red2_v4spn8.png"
-                  alt="car"
+                  src="/batch.png"
+                  alt="student"
                   className="w-full h-auto object-contain drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]"
                 />
                 <div className="absolute top-1/2 -right-2 w-8 h-4 bg-[#56b016]/30 blur-xl rounded-full animate-pulse" />
@@ -164,6 +164,11 @@ type ProcessCardProps = {
   index: number;
 };
 
+const isImageIcon = (value: string) =>
+  /^https?:\/\//.test(value) ||
+  value.startsWith("/") ||
+  /\.(gif|png|jpe?g|webp|svg)$/i.test(value);
+
 const ProcessCard = ({ step, index }: ProcessCardProps) => {
   const isEven = index % 2 === 0;
 
@@ -179,8 +184,17 @@ const ProcessCard = ({ step, index }: ProcessCardProps) => {
 
       <div className="p-5 md:p-7 bg-[#56b016] border border-[#56b016]/80 rounded-2xl backdrop-blur-md hover:bg-[#4b9914] hover:border-[#4b9914] transition-all duration-500 group shadow-lg shadow-[#56b016]/20">
         {/* Icon */}
-        <div className="w-12 h-12 rounded-xl bg-white/20 border border-white/25 flex items-center justify-center text-2xl mb-5 group-hover:bg-white/25 transition-all duration-300">
-          {step.icon}
+        <div className="w-12 h-12 rounded-xl bg-white border border-white/25 flex items-center justify-center text-2xl mb-5 group-hover:bg-white/25 transition-all duration-300 overflow-hidden">
+          {isImageIcon(step.icon) ? (
+            <img
+              src={step.icon}
+              alt={`${step.title} icon`}
+              className="h-8 w-8 object-contain"
+              loading="lazy"
+            />
+          ) : (
+            <span>{step.icon}</span>
+          )}
         </div>
 
         {/* Title + watermark number */}
