@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, MapPin, Clock, User, Send, Globe } from "lucide-react";
+import { Phone, Mail, User, Send,} from "lucide-react";
 import { motion } from "motion/react";
 
 export default function ContactSection() {

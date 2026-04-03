@@ -1,5 +1,5 @@
 import TypingHeading from "../shared/TypingHeading";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
