@@ -1,8 +1,10 @@
 import TypingHeading from "../shared/TypingHeading";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="section-shell relative min-h-[80vh] overflow-hidden sm:min-h-[85vh] lg:min-h-[90vh]">
+    <section className="section-shell relative min-h-[85vh] overflow-hidden flex items-center lg:min-h-screen">
+      {/* Video Background */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
@@ -11,75 +13,69 @@ export default function Hero() {
         playsInline
         poster="/hero-poster.jpg"
       >
-        <source src="/hero.mp4" type="video/mp4" />
+        <source src="/hero4.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-7 text-white lg:pr-6">
-            <p className="section-kicker text-white/80">CAREERKICK NEET ADVISOR</p>
-            
-            {/* --- UPDATED WRAPPER --- */}
+
+      {/* Darker Gradient Overlay for better contrast */}
+      <div
+        className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/50 lg:to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 w-full max-w-none px-5 sm:px-12 lg:px-20 py-20 lg:py-0">
+        <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
+          <div className="space-y-6 sm:space-y-8 text-white">
+            {/* New: Engaging Badge - Adjusted padding/text for mobile */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md">
+              <Sparkles className="h-3.5 w-3.5 text-yellow-400" />
+              <p className="text-[0.6rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-white/90">
+                India's Most Intelligent NEET Mentor
+              </p>
+            </div>
+
             <div className="relative w-full">
-              {/* 1. Invisible Placeholder: Uses the longest string to set the permanent height */}
-              <div 
-                className="invisible pointer-events-none text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight" 
+              {/* Invisible Placeholder - Optimized leading for mobile wrap */}
+              <div
+                className="invisible pointer-events-none text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight"
                 aria-hidden="true"
               >
-                Your personal NEET roadmap, designed for consistency.
+                Stop guessing your NEET prep, start dominating it.
               </div>
-              
-              {/* 2. Absolute overlay for the actual typing effect */}
+
+              {/* High-Impact Typing Effect - Matches placeholder leading */}
               <div className="absolute top-0 left-0 w-full h-full">
                 <TypingHeading
-                  staticText="Your personal NEET roadmap,"
+                  staticText="Your NEET success starts with"
                   words={[
-                    "built for top ranks.",
-                    "designed for consistency.",
-                    "powered by data.",
+                    "smarter guidance.",
+                    "Careerkick.",
+                    "expert mentorship.",
+                    "the right strategy.",
                   ]}
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-white"
-                  staticTextClass="text-white/80"
-                  dynamicTextClass="text-white"
-                  cursorClass="text-white"
-                  typingSpeed={60}
+                  className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-white"
+                  staticTextClass="text-white/90"
+                  dynamicTextClass="text-[#56b016]"
+                  cursorClass="text-[#56b016]"
+                  typingSpeed={50}
                   deletingSpeed={30}
-                  delayBetweenWords={1000}
+                  delayBetweenWords={1500}
                 />
               </div>
             </div>
-            {/* ----------------------- */}
 
-            <p className="max-w-xl text-base text-white/80 sm:text-lg lg:text-xl leading-relaxed">
-              Personalized study plans, smart analytics, and expert guidance to
-              keep your prep focused, consistent, and confident.
+            {/* Subtext: Adjusted size for mobile readability */}
+            <p>
+              Every mark counts. Every day matters.{" "}
+              <span className="text-white font-medium">Careerkick</span> gives
+              you expert guidance, a personalised strategy, and the support you
+              need to crack NEET—and claim your seat.
             </p>
-            <div className="flex flex-wrap items-center gap-3">
-              <button className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition hover:-translate-y-px hover:shadow-xl">
-                Start your plan
-              </button>
-              <button className="rounded-full border border-white/40 bg-transparent px-6 py-3 text-sm font-semibold text-white/80 transition hover:border-white hover:text-white">
-                View success stories
-              </button>
-            </div>
-            <div className="flex flex-wrap gap-3 text-[0.65rem] uppercase tracking-[0.22em] text-white/70">
-              <span className="rounded-full border border-white/30 px-4 py-2">
-                1:1 Mentors
-              </span>
-              <span className="rounded-full border border-white/30 px-4 py-2">
-                Daily Targets
-              </span>
-              <span className="rounded-full border border-white/30 px-4 py-2">
-                Mock Insights
-              </span>
-            </div>
-          </div>
-          
-          {/* Assuming you want your Insight Card rendered here based on the grid setup */}
-          <div className="hidden lg:block lg:pl-6">
-             {/* <HeroInsightCard /> */}
           </div>
 
+          {/* Right Side Content */}
+          <div className="hidden lg:block">
+            <div className="animate-float">{/* <HeroInsightCard /> */}</div>
+          </div>
         </div>
       </div>
     </section>
