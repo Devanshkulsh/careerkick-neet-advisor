@@ -1,10 +1,11 @@
 import "./App.css";
 import AchievementSection from "./components/AchievementSection";
+import ContactFloat from "./components/ContactFloat";
 import ContactSection from "./components/ContactSection";
 import CTASection from "./components/CTASection";
 import Hero from "./components/Hero";
 import NeetGuideTable from "./components/NeetGuideTable";
-import Stepper from "./components/Stepper";
+// import Stepper from "./components/Stepper";
 import StepSection from "./components/StepSection";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <NeetGuideTable />
         <ContactSection />
         <CTASection />
+        <ContactFloat />
       </main>
     </>
   );
