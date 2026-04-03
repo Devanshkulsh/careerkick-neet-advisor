@@ -1,5 +1,4 @@
 import React from "react";
-import type { LucideProps } from "lucide-react";
 import { Phone, Mail, MapPin, Clock, User, Send, Globe } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -29,21 +28,24 @@ export default function ContactSection() {
 
             <div className="grid gap-3 rounded-b-[20px] bg-slate-50 p-3 sm:gap-4">
               <ContactCard
-                icon={<Phone size={24} />}
+                iconSrc="/icons/contact.gif"
+                iconAlt="Phone"
                 title="Phone"
                 link="tel:+917396062116"
                 linkText="+91 7396062116"
               />
 
               <ContactCard
-                icon={<Mail size={24} />}
+                iconSrc="/icons/email.gif"
+                iconAlt="Email"
                 title="Email"
                 link="mailto:info@careerkick.in"
                 linkText="info@careerkick.in"
               />
 
               <ContactCard
-                icon={<MapPin size={24} />}
+                iconSrc="/icons/location.gif"
+                iconAlt="Location"
                 title="Location"
                 link="https://maps.app.goo.gl/LoJTZNfKucYpX2kLA"
                 linkText="2nd Floor, AA-007 Golf Link-1, Greater Noida"
@@ -51,7 +53,8 @@ export default function ContactSection() {
               />
 
               <ContactCard
-                icon={<Globe size={24} />}
+                iconSrc="/icons/website.gif"
+                iconAlt="Website"
                 title="Website"
                 link="https://careerkick.in"
                 linkText="careerkick.in"
@@ -100,19 +103,25 @@ export default function ContactSection() {
 }
 
 interface ContactCardProps {
-  icon: React.ReactElement<LucideProps>;
+  iconSrc: string;
+  iconAlt: string;
   title: string;
   link: string;
   linkText: string;
   isAddress?: boolean;
 }
 
-function ContactCard({ icon, title, link, linkText, isAddress = false }: ContactCardProps) {
+function ContactCard({ iconSrc, iconAlt, title, link, linkText, isAddress = false }: ContactCardProps) {
   return (
     <div className="group flex flex-col items-center gap-4 rounded-xl border border-slate-100 bg-white p-5 text-center shadow-sm sm:flex-row sm:items-center sm:gap-5 sm:p-6 sm:text-left transition-all duration-300">
       <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#56b016]/25 bg-[#56b016]/10 text-[#56b016] shadow-inner sm:h-14 sm:w-14">
         <motion.div whileHover={{ scale: 1.15 }} transition={{ duration: 0.25 }}>
-          {React.cloneElement(icon, { strokeWidth: 1.5 })}
+          <img
+            src={iconSrc}
+            alt={iconAlt}
+            className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
+            loading="lazy"
+          />
         </motion.div>
       </span>
       <div>

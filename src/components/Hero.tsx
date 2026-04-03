@@ -18,7 +18,7 @@ export default function Hero() {
 
       {/* Darker Gradient Overlay for better contrast */}
       <div
-        className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/50 lg:to-transparent"
+        className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80 lg:bg-linear-to-r lg:from-black/80 lg:via-black/50 lg:to-transparent"
         aria-hidden="true"
       />
 

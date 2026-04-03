@@ -1,5 +1,6 @@
 import "./App.css";
 import AchievementSection from "./components/AchievementSection";
+import BottomBar from "./components/BottomBar";
 import ContactFloat from "./components/ContactFloat";
 import ContactSection from "./components/ContactSection";
 import CTASection from "./components/CTASection";
@@ -20,6 +21,7 @@ function App() {
         <CTASection />
         <ContactFloat />
       </main>
+      <BottomBar />
     </>
   );
 }

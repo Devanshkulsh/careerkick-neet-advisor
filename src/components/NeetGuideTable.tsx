@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Building2,
-  GraduationCap,
-  Landmark,
-  Stethoscope,
-} from "lucide-react";
+import { Building2, GraduationCap, Landmark, Stethoscope } from "lucide-react";
 
 type Row = {
   icon: React.ReactNode;
@@ -46,9 +41,6 @@ export default function NeetGuideTable() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-6">
-          {/* <p className="text-gray-500 text-sm">
-            An innovative guide exclusively
-          </p> */}
           <p className="text-black/65 text-sm">Paid Counselling</p>
           <h2 className="text-3xl font-bold text-[#56b016]">
             designed for Medical & Allied Courses
@@ -56,54 +48,56 @@ export default function NeetGuideTable() {
         </div>
 
         <div className="-mx-4 px-4 overflow-x-auto">
-          <div className="min-w-180">
+          <table className="min-w-180 w-full border-separate border-spacing-y-3">
             {/* Top Header */}
-            <div className="grid grid-cols-3 gap-2 mb-2">
-              <div className="rounded-tl-3xl bg-[#56b016] py-6 text-center font-bold text-lg text-white">
-                Course / Service
-              </div>
-
-              <div className="bg-[#56b016] py-4 text-center text-white">
-                <p className="font-bold text-lg">Description</p>
-              </div>
-              <div className="rounded-tr-3xl bg-[#56b016] py-4 text-center text-white">
-                <p className="font-bold text-lg">Price (Incl. GST)</p>
-              </div>
-            </div>
+            <thead>
+              <tr className="grid grid-cols-3 gap-2 mb-2">
+                <th className="rounded-tl-3xl bg-[#56b016] py-6 text-center font-bold text-lg text-white">
+                  Course / Service
+                </th>
+                <th className="bg-[#56b016] py-4 text-center text-white font-bold text-lg">
+                  Description
+                </th>
+                <th className="rounded-tr-3xl bg-[#56b016] py-4 text-center text-white font-bold text-lg">
+                  Price (Incl. GST)
+                </th>
+              </tr>
+            </thead>
 
             {/* Rows */}
-            <div className="flex flex-col gap-3">
+            <tbody className="flex flex-col gap-3">
               {data.map((item, idx) => (
-                <div
+                <tr
                   key={idx}
                   className="grid grid-cols-3 gap-2 rounded-xl overflow-hidden shadow-sm"
                 >
                   {/* Left Section */}
-                  <div className="flex items-center gap-4 bg-[#56b016] p-4 text-white">
-                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow">
+                  <td className="flex items-center gap-4 bg-[#56b016] p-4 text-white">
+                    <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-full bg-white text-[#56b016] shadow-inner">
                       {item.icon}
                     </div>
-
                     <div>
-                      <h3 className="font-bold text-lg">{item.title}</h3>
+                      <h3 className="font-bold text-lg text-left">
+                        {item.title}
+                      </h3>
                     </div>
-                  </div>
+                  </td>
 
                   {/* Middle */}
-                  <div className="flex flex-col justify-center gap-2 bg-black p-4 text-white">
+                  <td className="flex flex-col justify-center gap-2 bg-black p-4 text-white text-left">
                     <p className="text-sm leading-relaxed text-white/90">
                       {item.description}
                     </p>
-                  </div>
+                  </td>
 
                   {/* Right */}
-                  <div className="flex items-center justify-center bg-[#56b016] p-4 text-center font-medium text-white">
+                  <td className="flex items-center justify-center bg-[#56b016] p-4 text-center font-medium text-white">
                     <span className="text-sm">{item.price}</span>
-                  </div>
-                </div>
+                  </td>
+                </tr>
               ))}
-            </div>
-          </div>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
