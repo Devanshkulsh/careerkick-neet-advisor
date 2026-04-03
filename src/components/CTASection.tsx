@@ -61,32 +61,37 @@ export default function CTASection() {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-12 mt-12 lg:mt-16 border-t border-slate-200 pt-10 w-full">
-            <div className="flex flex-col">
-              <span className="text-xl md:text-3xl font-black text-slate-900">
-                10k+
-              </span>
-              <span className="text-[9px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-1">
-                Aspirants
-              </span>
-            </div>
-            <div className="flex flex-col border-x border-slate-100 px-1 sm:px-0">
-              <span className="text-xl md:text-3xl font-black text-slate-900">
-                98%
-              </span>
-              <span className="text-[9px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-1">
-                Success Rate
-              </span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl md:text-3xl font-black text-slate-900">
-                50+
-              </span>
-              <span className="text-[9px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-1">
-                Mentors
-              </span>
-            </div>
-          </div>
+<div className="grid grid-cols-3 gap-0 mt-12 lg:mt-16 border-t border-slate-200 pt-10 w-full">
+  {/* Stat 1 */}
+  <div className="flex flex-col items-center lg:items-start pr-2">
+    <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
+      1M+
+    </span>
+    <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
+      Students <br className="hidden sm:block lg:hidden" /> Guided
+    </span>
+  </div>
+
+  {/* Stat 2 - Center with borders */}
+  <div className="flex flex-col items-center lg:items-start px-2 border-x border-slate-100">
+    <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
+      150+
+    </span>
+    <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
+      Colleges <br className="hidden sm:block lg:hidden" /> Associated
+    </span>
+  </div>
+
+  {/* Stat 3 */}
+  <div className="flex flex-col items-center lg:items-start pl-2">
+    <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
+      100K+
+    </span>
+    <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
+      Successful <br className="hidden sm:block lg:hidden" /> Admissions
+    </span>
+  </div>
+</div>
         </div>
 
         {/* ================= RIGHT CONTENT (5 Cols) ================= */}
