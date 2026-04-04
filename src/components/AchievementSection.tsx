@@ -43,9 +43,13 @@ const AchievementSection = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 text-center">
-        <div className="relative mb-4 inline-block">
-          <span className="relative z-10 px-8 py-2 text-2xl font-black">Our Achievements</span>
-          <div className="absolute inset-0 -rotate-1 skew-x-12 rounded-sm bg-white shadow-sm" />
+        <div className="text-center">
+          <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#56b016] sm:text-sm">
+            Achievements
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-black sm:mt-4 sm:text-5xl">
+            Our Achievements
+          </h2>
         </div>
 
         <div className="mb-2 flex justify-center gap-1">
@@ -54,7 +58,7 @@ const AchievementSection = () => {
           ))}
         </div>
 
-        <p className="mb-16 font-bold uppercase tracking-tight text-black">
+        <p className="mx-auto mb-16 mt-3 max-w-2xl text-base text-slate-600 sm:mt-4 sm:text-lg">
           One of the Highest Rated Counselling Services
         </p>
 

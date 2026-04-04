@@ -18,20 +18,18 @@ export default function CTASection() {
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         {/* ================= LEFT CONTENT (7 Cols) ================= */}
         <div className="lg:col-span-7 flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#56b016]/10 border border-[#56b016]/20 text-[10px] sm:text-xs font-bold tracking-widest text-[#4a9913] uppercase mb-6 lg:mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#56b016] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#56b016]"></span>
-            </span>
+          <div className="mb-6 lg:mb-8">
+            <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#56b016] sm:text-sm">
             Premium Medical Guidance
+            </p>
           </div>
 
-          <h1 className="text-[2.6rem] leading-[1.1] md:text-5xl lg:text-7xl font-extrabold tracking-tight px-2 sm:px-0">
+          <h1 className="px-2 text-3xl font-extrabold tracking-tight text-black sm:px-0 sm:text-5xl">
             Climb Your Way <br className="hidden sm:block" />
             to a <span className="text-[#56b016]">Top Medical</span> College
           </h1>
 
-          <p className="mt-6 text-slate-600 max-w-xl text-base md:text-lg leading-relaxed px-4 sm:px-0">
+          <p className="mt-3 max-w-2xl px-4 text-base text-slate-600 sm:mt-4 sm:px-0 sm:text-lg">
             Get personalized guidance, proven strategies, and a clear path to
             crack <span className="font-semibold text-slate-900">NEET</span>{" "}
             with the confidence of a topper.

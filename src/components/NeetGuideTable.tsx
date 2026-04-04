@@ -40,9 +40,11 @@ export default function NeetGuideTable() {
     <section className="w-full bg-white py-10 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-6">
-          <p className="text-black/65 text-sm">Paid Counselling</p>
-          <h2 className="text-3xl font-bold text-[#56b016]">
+        <div className="mb-6 text-center">
+          <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#56b016] sm:text-sm">
+            Paid Counselling
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-black sm:mt-4 sm:text-5xl">
             designed for Medical & Allied Courses
           </h2>
         </div>

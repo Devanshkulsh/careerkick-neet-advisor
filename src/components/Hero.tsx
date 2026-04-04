@@ -29,7 +29,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md">
               <Sparkles className="h-3.5 w-3.5 text-yellow-400" />
               <p className="text-[0.6rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-white/90">
-                India's Most Intelligent NEET Mentor
+                India's Most Trusted Counselling Platform
               </p>
             </div>
 
