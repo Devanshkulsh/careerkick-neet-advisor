@@ -138,7 +138,7 @@ export default function PricingSection() {
                         : "border border-[#56b016]/25 bg-[#56b016]/8 text-[#56b016] hover:bg-[#56b016]/14"
                     }`}
                   >
-                    Get Guidance
+                    Get Guidanc
                   </button>
                 </div>
               </div>
