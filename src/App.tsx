@@ -7,7 +7,8 @@ import ContactFloat from "./components/ContactFloat";
 import ContactSection from "./components/ContactSection";
 import CTASection from "./components/CTASection";
 import Hero from "./components/Hero";
-import NeetGuideTable from "./components/NeetGuideTable";
+// import NeetGuideTable from "./components/NeetGuideTable";
+import PricingSection from "./components/PricingSection";
 // import Stepper from "./components/Stepper";
 // import StepSection from "./components/StepSection";
 
@@ -20,7 +21,8 @@ function App() {
         {/* <StepSection/> */}
         {/* <AchievementSection/> */}
         <AchievementsSection />
-        <NeetGuideTable />
+        <PricingSection />
+        {/* <NeetGuideTable /> */}
         <ContactSection />
         <CTASection />
         <ContactFloat />
