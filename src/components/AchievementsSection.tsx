@@ -22,7 +22,8 @@ const data: Achievement[] = [
       "Clear career direction after BAMS",
       "Support at every step",
     ],
-    video: "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547552/student_impact_qll0ja.mp4",
+    video:
+      "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547552/student_impact_qll0ja.mp4",
     stats: [{ label: "Students Guided", value: 1000000 }],
   },
   {
@@ -35,7 +36,8 @@ const data: Achievement[] = [
       "Get answers to all your doubts",
       "Step-by-step career planning",
     ],
-    video: "/achievements/counselling.mp4",
+    video:
+      "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775555657/experience_upjmm7.mp4",
     stats: [{ label: "Years of experience", value: 8 }],
   },
   {
@@ -48,7 +50,8 @@ const data: Achievement[] = [
       "Get answers to all your doubts",
       "Step-by-step career planning",
     ],
-    video: "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547551/counselling_uddtho.mp4",
+    video:
+      "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547551/counselling_uddtho.mp4",
     stats: [{ label: "Counselling One to One", value: 10000 }],
   },
 ];

@@ -29,7 +29,8 @@ const steps: Step[] = [
       "Receives welcome email with next steps and timeline",
     ],
 
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/inquiry_and_registration_v7k1i4.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/inquiry_and_registration_v7k1i4.webp",
   },
   {
     id: 2,
@@ -47,7 +48,8 @@ const steps: Step[] = [
       "Optional: Psychometric assessment to identify aptitude and interests",
       "Upload documents: Marksheets, scorecards, certificates (PDF format)",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/profile_data_collection_cxdtlb.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/profile_data_collection_cxdtlb.webp",
   },
   {
     id: 3,
@@ -65,7 +67,8 @@ const steps: Step[] = [
       "Generate preliminary assessment report with strengths and improvement areas",
       "Student receives email notification when review is complete",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547057/profile_review_scoring_fq33md.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547057/profile_review_scoring_fq33md.webp",
   },
   {
     id: 4,
@@ -74,7 +77,8 @@ const steps: Step[] = [
     highlight: "Payment",
     description: "Fee Structure as product service catalogue pricing",
     points: [],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547057/paid_counselling_payment_eh1wf7.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547057/paid_counselling_payment_eh1wf7.webp",
   },
   {
     id: 5,
@@ -92,7 +96,8 @@ const steps: Step[] = [
       "Seat availability by category and quota",
       "Share report via portal dashboard and email",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/profile_shortlisting_ohgbuw.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/profile_shortlisting_ohgbuw.webp",
   },
   {
     id: 6,
@@ -112,7 +117,8 @@ const steps: Step[] = [
       "State counselling portals (UP, Maharashtra, etc.)",
       "Share college comparison matrix with fees, placements, facilities",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/college_admission_sah0q2.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/college_admission_sah0q2.webp",
   },
   {
     id: 7,
@@ -130,7 +136,8 @@ const steps: Step[] = [
       "Download registration confirmation and save credentials securely",
       "Track important dates: Choice filling start, choice locking deadline, rounds",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/form_filling_whyuz2.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/form_filling_whyuz2.webp",
   },
   {
     id: 8,
@@ -148,7 +155,8 @@ const steps: Step[] = [
       "Save choice list PDF from portal for records",
       "Monitor seat allocation rounds (usually 3-6 rounds)",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547054/choice_filling_rrvhbe.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547054/choice_filling_rrvhbe.webp",
   },
   {
     id: 9,
@@ -169,7 +177,8 @@ const steps: Step[] = [
       "Final Admission:",
       "Report to college for final admission formalities",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/college_admission_sah0q2.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/college_admission_sah0q2.webp",
   },
   {
     id: 10,
@@ -181,7 +190,8 @@ const steps: Step[] = [
       "Track student admission status on portal dashboard",
       "Service completion confirmation email sent",
     ],
-    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/future_ismamp.webp",
+    image:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/future_ismamp.webp",
   },
 ];
 
@@ -191,28 +201,51 @@ export default function AdmissionTimeline() {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
+    let observers: IntersectionObserver[] = [];
 
-    refs.current.forEach((ref, index) => {
-      if (!ref) return;
+    const setupObservers = (isMobile: boolean) => {
+      observers.forEach((obs) => obs.disconnect());
+      observers = [];
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActive(index);
-          }
-        },
-        {
-          rootMargin: "-40% 0px -40% 0px",
-          threshold: 0.2,
-        },
-      );
+      refs.current.forEach((ref, index) => {
+        if (!ref) return;
 
-      observer.observe(ref);
-      observers.push(observer);
-    });
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setActive(index);
+            }
+          },
+          {
+            // Mobile cards are taller; use a looser margin/threshold
+            rootMargin: isMobile ? "0px 0px -30% 0px" : "-40% 0px -40% 0px",
+            threshold: isMobile ? 0.1 : 0.2,
+          },
+        );
 
-    return () => observers.forEach((obs) => obs.disconnect());
+        observer.observe(ref);
+        observers.push(observer);
+      });
+    };
+
+    const mql = window.matchMedia("(max-width: 1023px)");
+    setupObservers(mql.matches);
+
+    const handleChange = () => setupObservers(mql.matches);
+    if (mql.addEventListener) {
+      mql.addEventListener("change", handleChange);
+    } else {
+      mql.addListener(handleChange);
+    }
+
+    return () => {
+      observers.forEach((obs) => obs.disconnect());
+      if (mql.removeEventListener) {
+        mql.removeEventListener("change", handleChange);
+      } else {
+        mql.removeListener(handleChange);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -273,6 +306,15 @@ export default function AdmissionTimeline() {
                         : "opacity-55 translate-y-6",
                     )}
                   >
+                    {/* Mobile image */}
+                    <div className="mb-4 overflow-hidden rounded-xl border border-[#56b016]/20 shadow-[0_14px_40px_rgba(86,176,22,0.14)] sm:mb-6 lg:hidden">
+                      <img
+                        src={step.image}
+                        alt={`${step.title} ${step.highlight}`}
+                        className="h-48 w-full object-cover sm:h-56"
+                      />
+                    </div>
+
                     {/* Tag */}
                     <span className="rounded-full bg-[#56b016]/10 px-3 py-1 text-xs uppercase tracking-wide text-[#56b016]">
                       {step.tag}

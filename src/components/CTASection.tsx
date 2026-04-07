@@ -66,7 +66,8 @@ export default function CTASection() {
                 10 Lakhs+
               </span>
               <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
-                Students Guided across <br className="hidden sm:block lg:hidden" /> India 
+                Students Guided across{" "}
+                <br className="hidden sm:block lg:hidden" /> India
               </span>
             </div>
 
@@ -76,8 +77,8 @@ export default function CTASection() {
                 1 Lakh+
               </span>
               <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
-                Students allotted to top <br className="hidden sm:block lg:hidden" />{" "}
-                medical colleges
+                Students allotted to top{" "}
+                <br className="hidden sm:block lg:hidden" /> medical colleges
               </span>
             </div>
 

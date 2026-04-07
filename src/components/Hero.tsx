@@ -1,9 +1,9 @@
-import TypingHeading from "../shared/TypingHeading";
+﻿import TypingHeading from "../shared/TypingHeading";
 import { Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="section-shell relative min-h-[85vh] overflow-hidden flex items-center lg:min-h-screen">
+    <section className="section-shell relative min-h-[70vh] overflow-hidden flex items-center sm:min-h-[80vh] lg:min-h-screen">
       {/* Video Background */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -25,21 +25,13 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 w-full max-w-none px-5 sm:px-12 lg:px-20 py-20 lg:py-0">
-        <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
-          <div className="space-y-6 sm:space-y-8 text-white">
-            {/* New: Engaging Badge - Adjusted padding/text for mobile */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md">
-              <Sparkles className="h-3.5 w-3.5 text-yellow-400" />
-              <p className="text-[0.6rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-white/90">
-                India's Most Trusted Counselling Platform
-              </p>
-            </div>
-
+      <div className="relative z-10 w-full max-w-none px-4 sm:px-10 lg:px-20 py-14 sm:py-20 lg:py-0">
+        <div className="grid items-center gap-10 lg:gap-12 lg:grid-cols-2">
+          <div className="space-y-5 sm:space-y-7 text-white">
             <div className="relative w-full">
               {/* Invisible Placeholder - Optimized leading for mobile wrap */}
               <div
-                className="invisible pointer-events-none text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight"
+                className="invisible pointer-events-none text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight"
                 aria-hidden="true"
               >
                 Stop guessing your NEET prep, start dominating it.
@@ -55,7 +47,7 @@ export default function Hero() {
                     "expert mentorship.",
                     "the right strategy.",
                   ]}
-                  className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-white"
+                  className="text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-white"
                   staticTextClass="text-white/90"
                   dynamicTextClass="text-[#56b016]"
                   cursorClass="text-[#56b016]"
@@ -67,12 +59,20 @@ export default function Hero() {
             </div>
 
             {/* Subtext: Adjusted size for mobile readability */}
-            <p>
+            <p className="text-sm leading-6 text-white/85 sm:text-base sm:leading-7 lg:text-lg">
               Every mark counts. Every day matters.{" "}
               <span className="text-white font-medium">Careerkick</span> gives
               you expert guidance, a personalised strategy, and the support you
-              need to crack NEET—and claim your seat.
+              need to crack your dream college.
             </p>
+
+            {/* New: Engaging Badge - Adjusted padding/text for mobile */}
+            <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-3 py-1.5 sm:rounded-full sm:px-4 sm:py-1.5 backdrop-blur-md">
+              <Sparkles className="h-3.5 w-3.5 shrink-0 text-yellow-400" />
+              <p className="text-[0.62rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.12em] sm:tracking-[0.25em] text-white/90">
+                India's Most Trusted Counselling Platform
+              </p>
+            </div>
           </div>
 
           {/* Right Side Content */}
