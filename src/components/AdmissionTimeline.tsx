@@ -29,7 +29,7 @@ const steps: Step[] = [
       "Receives welcome email with next steps and timeline",
     ],
 
-    image: "/admission-timeline/inquiry_and_registration.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/inquiry_and_registration_v7k1i4.webp",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const steps: Step[] = [
       "Optional: Psychometric assessment to identify aptitude and interests",
       "Upload documents: Marksheets, scorecards, certificates (PDF format)",
     ],
-    image: "/admission-timeline/profile_data_collection.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/profile_data_collection_cxdtlb.webp",
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ const steps: Step[] = [
       "Generate preliminary assessment report with strengths and improvement areas",
       "Student receives email notification when review is complete",
     ],
-    image: "/admission-timeline/profile_review_scoring.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547057/profile_review_scoring_fq33md.webp",
   },
   {
     id: 4,
@@ -74,7 +74,7 @@ const steps: Step[] = [
     highlight: "Payment",
     description: "Fee Structure as product service catalogue pricing",
     points: [],
-    image: "/admission-timeline/paid_counselling_payment.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547057/paid_counselling_payment_eh1wf7.webp",
   },
   {
     id: 5,
@@ -92,7 +92,7 @@ const steps: Step[] = [
       "Seat availability by category and quota",
       "Share report via portal dashboard and email",
     ],
-    image: "/admission-timeline/profile_shortlisting.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/profile_shortlisting_ohgbuw.webp",
   },
   {
     id: 6,
@@ -112,7 +112,7 @@ const steps: Step[] = [
       "State counselling portals (UP, Maharashtra, etc.)",
       "Share college comparison matrix with fees, placements, facilities",
     ],
-    image: "/admission-timeline/college_shortlisting.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/college_admission_sah0q2.webp",
   },
   {
     id: 7,
@@ -130,7 +130,7 @@ const steps: Step[] = [
       "Download registration confirmation and save credentials securely",
       "Track important dates: Choice filling start, choice locking deadline, rounds",
     ],
-    image: "/admission-timeline/form_filling.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/form_filling_whyuz2.webp",
   },
   {
     id: 8,
@@ -148,7 +148,7 @@ const steps: Step[] = [
       "Save choice list PDF from portal for records",
       "Monitor seat allocation rounds (usually 3-6 rounds)",
     ],
-    image: "/admission-timeline/choice_filling.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547054/choice_filling_rrvhbe.webp",
   },
   {
     id: 9,
@@ -169,7 +169,7 @@ const steps: Step[] = [
       "Final Admission:",
       "Report to college for final admission formalities",
     ],
-    image: "/admission-timeline/college_admission.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547055/college_admission_sah0q2.webp",
   },
   {
     id: 10,
@@ -181,12 +181,13 @@ const steps: Step[] = [
       "Track student admission status on portal dashboard",
       "Service completion confirmation email sent",
     ],
-    image: "/admission-timeline/future.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547056/future_ismamp.webp",
   },
 ];
 
 export default function AdmissionTimeline() {
   const [active, setActive] = useState(0);
+  const [imageVisible, setImageVisible] = useState(true);
   const refs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -213,6 +214,12 @@ export default function AdmissionTimeline() {
 
     return () => observers.forEach((obs) => obs.disconnect());
   }, []);
+
+  useEffect(() => {
+    setImageVisible(false);
+    const frame = requestAnimationFrame(() => setImageVisible(true));
+    return () => cancelAnimationFrame(frame);
+  }, [active]);
 
   return (
     <section className="bg-white py-16 text-black sm:py-20 lg:py-24">
@@ -309,7 +316,10 @@ export default function AdmissionTimeline() {
                 <img
                   src={steps[active].image}
                   alt="step visual"
-                  className="h-64 w-full object-cover sm:h-80 lg:h-100"
+                  className={clsx(
+                    "h-64 w-full object-cover transition-opacity duration-500 ease-in-out sm:h-80 lg:h-100",
+                    imageVisible ? "opacity-100" : "opacity-0",
+                  )}
                 />
               </div>
 

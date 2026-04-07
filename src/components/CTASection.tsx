@@ -20,7 +20,7 @@ export default function CTASection() {
         <div className="lg:col-span-7 flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1">
           <div className="mb-6 lg:mb-8">
             <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#56b016] sm:text-sm">
-            Premium Medical Guidance
+              Premium Medical Guidance
             </p>
           </div>
 
@@ -59,37 +59,38 @@ export default function CTASection() {
           </div>
 
           {/* Stats Section */}
-<div className="grid grid-cols-3 gap-0 mt-12 lg:mt-16 border-t border-slate-200 pt-10 w-full">
-  {/* Stat 1 */}
-  <div className="flex flex-col items-center lg:items-start pr-2">
-    <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
-      1M+
-    </span>
-    <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
-      Students <br className="hidden sm:block lg:hidden" /> Guided
-    </span>
-  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 mt-12 lg:mt-16 border-t border-slate-200 pt-8 sm:pt-10 w-full text-center lg:text-left sm:divide-x sm:divide-slate-100">
+            {/* Stat 1 */}
+            <div className="flex flex-col items-center lg:items-start sm:pr-4">
+              <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
+                10 Lakhs+
+              </span>
+              <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
+                Students Guided across <br className="hidden sm:block lg:hidden" /> India 
+              </span>
+            </div>
 
-  {/* Stat 2 - Center with borders */}
-  <div className="flex flex-col items-center lg:items-start px-2 border-x border-slate-100">
-    <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
-      150+
-    </span>
-    <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
-      Colleges <br className="hidden sm:block lg:hidden" /> Associated
-    </span>
-  </div>
+            {/* Stat 2 */}
+            <div className="flex flex-col items-center lg:items-start sm:pl-4">
+              <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
+                1 Lakh+
+              </span>
+              <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
+                Students allotted to top <br className="hidden sm:block lg:hidden" />{" "}
+                medical colleges
+              </span>
+            </div>
 
-  {/* Stat 3 */}
-  <div className="flex flex-col items-center lg:items-start pl-2">
-    <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
-      100K+
-    </span>
-    <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
-      Successful <br className="hidden sm:block lg:hidden" /> Admissions
-    </span>
-  </div>
-</div>
+            {/* Stat 3 - Center with borders */}
+            <div className="flex flex-col items-center lg:items-start sm:px-4">
+              <span className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tabular-nums tracking-tight">
+                8+
+              </span>
+              <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-400 mt-2 leading-tight">
+                Years of counselling experience
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* ================= RIGHT CONTENT (5 Cols) ================= */}
@@ -102,7 +103,7 @@ export default function CTASection() {
             <div className="relative rounded-[1.4rem] overflow-hidden aspect-4/5 lg:aspect-3/4 bg-slate-100 shadow-inner">
               <video
                 ref={videoRef}
-                src="/cta.mp4"
+                src="https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547730/cta_eoxwuj.mp4"
                 className="w-full h-full object-cover"
                 autoPlay
                 muted

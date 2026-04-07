@@ -15,26 +15,26 @@ const pricingData: Pricing[] = [
     title: "Ayush Counselling",
     description: "Govt + Private Colleges",
     price: "₹25,000",
-    image: "/pricing/ayush.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547635/ayush_lqnzhn.webp",
   },
   {
     title: "MBBS Counselling (Govt College)",
     description: "Complete admission support",
     price: "₹30,000",
-    image: "/pricing/mbbs_govt.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547636/mbbs_govt_jfwmon.webp",
     highlight: true,
   },
   {
     title: "MBBS Counselling (Private College)",
     description: "Private college admission guidance",
     price: "₹50,000",
-    image: "/pricing/mbbs_private.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547637/mbbs_private_xlx12n.webp",
   },
   {
     title: "BDS / BSc Nursing / Veterinary / BPT",
     description: "All-inclusive counselling support",
     price: "₹20,000",
-    image: "/pricing/bds.webp",
+    image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547636/bds_sldzxw.webp",
   },
 ];
 

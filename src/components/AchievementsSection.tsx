@@ -14,19 +14,32 @@ type Achievement = {
 const data: Achievement[] = [
   {
     id: 1,
-    label: "Students Helped",
-    title: "Students Positively Impacted",
+    label: "Students Guided",
+    title: "Students Positively Guided",
     points: [
-      "Guided thousands of BAMS students across India",
+      "Guided 10 Lakh+ students across India",
       "Trusted by students and parents",
       "Clear career direction after BAMS",
       "Support at every step",
     ],
-    video: "/achievements/student_impact.mp4",
-    stats: [{ label: "Students Positively Impacted", value: 2000000 }],
+    video: "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547552/student_impact_qll0ja.mp4",
+    stats: [{ label: "Students Guided", value: 1000000 }],
   },
   {
     id: 2,
+    label: "Counselling Experience",
+    title: "Our Counselling Experience",
+    points: [
+      "Our high Experience makes us the best choice",
+      "Talk directly with experts",
+      "Get answers to all your doubts",
+      "Step-by-step career planning",
+    ],
+    video: "/achievements/counselling.mp4",
+    stats: [{ label: "Years of experience", value: 8 }],
+  },
+  {
+    id: 3,
     label: "Personal Guidance",
     title: "1-to-1 Counselling",
     points: [
@@ -35,21 +48,8 @@ const data: Achievement[] = [
       "Get answers to all your doubts",
       "Step-by-step career planning",
     ],
-    video: "/achievements/counselling.mp4",
+    video: "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547551/counselling_uddtho.mp4",
     stats: [{ label: "Counselling One to One", value: 10000 }],
-  },
-  {
-    id: 3,
-    label: "Seminars & Classes",
-    title: "Seminars/Webinars",
-    points: [
-      "Regular online and offline sessions",
-      "Learn about career options after BAMS",
-      "Easy to understand guidance",
-      "Stay updated with latest opportunities",
-    ],
-    video: "/achievements/seminar.mp4",
-    stats: [{ label: "Seminars/Webinars", value: 50 }],
   },
 ];
 

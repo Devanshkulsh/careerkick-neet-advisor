@@ -13,7 +13,10 @@ export default function Hero() {
         playsInline
         poster="/hero-poster.jpg"
       >
-        <source src="/hero4.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775546975/hero4_pvvjbo.mp4"
+          type="video/mp4"
+        />
       </video>
 
       {/* Darker Gradient Overlay for better contrast */}
