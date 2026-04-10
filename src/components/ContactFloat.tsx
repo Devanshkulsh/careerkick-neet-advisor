@@ -45,8 +45,12 @@ export default function ContactFloat() {
             <div className="bg-[#075E54] p-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold">
-                    C
+                  <div className="w-10 h-10 bg-white rounded-full overflow-hidden flex items-center justify-center">
+                    <img
+                      src="/logo_circle.png"
+                      alt="CareerKick logo"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#075E54] rounded-full"></div>
                 </div>
