@@ -23,7 +23,7 @@ const data: Achievement[] = [
       "Support at every step",
     ],
     video:
-      "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775547552/student_impact_qll0ja.mp4",
+      "https://res.cloudinary.com/dhlqc0ymy/video/upload/v1775900897/students_guided_sihtnx.mp4",
     stats: [{ label: "Students Guided", value: 1000000 }],
   },
   {
