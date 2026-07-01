@@ -33,7 +33,7 @@ const pricingData: Pricing[] = [
   {
     title: "BDS / BSc Nursing / Veterinary / BPT",
     description: "All-inclusive counselling support",
-    price: "₹20,000",
+    price: "₹25,000",
     image: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775547636/bds_sldzxw.webp",
   },
 ];
