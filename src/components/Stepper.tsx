@@ -12,7 +12,7 @@ const steps: Step[] = [
     id: 1,
     title: "Identifying Student's Aspirations",
     description:
-      'By understanding student strengths and interests, our NEET Advisor platform helps identify the right aspiration path clearly.',
+      'By understanding student strengths and interests, Careerkick Services helps identify the right aspiration path clearly.',
   },
   {
     id: 2,
